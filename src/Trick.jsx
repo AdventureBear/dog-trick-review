@@ -7,8 +7,9 @@ function Trick({title, description, category}) {
        <div onClick={()=>setFlipped(!flipped)}>
            {!flipped &&
            <div  className='card'>
+               <p className='badge'>{category}</p>
                <h2>{title}</h2>
-               <p>{category}</p>
+
 
            </div>}
 
