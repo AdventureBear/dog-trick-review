@@ -62,7 +62,6 @@ function App() {
                 {uniqueCategories.map((category) => {
                     return (
                         <button
-                            className='category-button'
                             onClick={
                             ()=>{
                                 handleClick(category)
@@ -79,12 +78,12 @@ function App() {
         <div className='content'>
             <div className='cards-container'>
                 {filteredTricks.map((trick, i)=> {
-                    console.log(trick.title, i)
                    return (
                     <Trick
                         key = {i}
                         title={trick.title}
                         description={trick.description}
+                        category={trick.category}
                     />
                     )
                 })}

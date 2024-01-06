@@ -1,9 +1,9 @@
-function Trick({title, description}) {
+function Trick({title, description, category}) {
 
    return (
        <div  className='card'>
            <h2>{title}</h2>
-           <p>Category: Basic Obedience</p>
+           <p>{category}</p>
            <p>{description}</p>
        </div>
    )
