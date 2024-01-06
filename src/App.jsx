@@ -48,6 +48,7 @@ function App() {
         const newTricks = dogTricks.filter(trick=>trick.category === category)
         setFilteredTricks(newTricks)
         }
+
     }
 
     const [filteredTricks, setFilteredTricks] = useState(dogTricks)
@@ -77,10 +78,10 @@ function App() {
 
         <div className='content'>
             <div className='cards-container'>
-                {filteredTricks.map((trick, i)=> {
+                {filteredTricks.map((trick)=> {
                    return (
                     <Trick
-                        key = {i}
+                        key = {trick.title}
                         title={trick.title}
                         description={trick.description}
                         category={trick.category}

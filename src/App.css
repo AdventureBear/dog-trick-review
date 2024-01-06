@@ -18,7 +18,7 @@ html, body {
   background-color: #4169E1; /* Royal Blue */
   color: white;
   text-align: center;
-  padding: 10px 0px;
+  padding: 10px 0;
   width: 100%; /* Cover the full width */
   z-index: 1000; /* Ensures it's above other items */
 }
@@ -64,24 +64,31 @@ html, body {
   display: flex;
   flex-wrap: wrap; /* Allows items to wrap to the next line */
   gap: 20px; /* Adjust the space between cards */
+  row-gap: 20px;
   padding: 20px; /* Padding around the entire grid */
   justify-content: center; /* Center items in the container */
 }
 
-.card {
+.card, .card-back {
   background-color: #4169E1;
   box-shadow:0 4px 8px rgba(0,0,0,0.5);
   color: white;
   border-radius: 10px;
   padding: 15px;
-  width: calc(20% - 20px); /* Adjust width for 5 in a row, accounting for the gap */
-  min-width: 180px; /* Minimum width of each card */
+  height: 100px;
+  width: 200px;
   transition: transform 0.3s ease;
+}
+
+.card-back{
+  background-color: #b322a3;
+  cursor: pointer;
 }
 
 .card:hover {
   transform: scale(1.05);
   background-color: #6A9AE2;
+  cursor: pointer;
 }
 
 .category-button {
