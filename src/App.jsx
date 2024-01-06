@@ -52,16 +52,17 @@ function App() {
 
     const [filteredTricks, setFilteredTricks] = useState(dogTricks)
   return (
-    <div className='app'>
-        <nav className='navbar'>
+    <>
+        <div className='main-nav'>
             <h1>Find Your Next Trick</h1>
             <p>The Ultimate Collection of Dog Tricks!</p>
-        </nav>
-            <div className='sub-nav'>
+
+            <div className='category-nav'>
                 {/*<button onClick={()=> handleClick(null)}>All Tricks</button>*/}
                 {uniqueCategories.map((category) => {
                     return (
                         <button
+                            className='category-button'
                             onClick={
                             ()=>{
                                 handleClick(category)
@@ -73,9 +74,10 @@ function App() {
                     )
                 })}
             </div>
+        </div>
 
-        <main>
-            <div className='cardsContainer'>
+        <div className='content'>
+            <div className='cards-container'>
                 {filteredTricks.map((trick, i)=> {
                     console.log(trick.title, i)
                    return (
@@ -87,8 +89,8 @@ function App() {
                     )
                 })}
             </div>
-        </main>
-    </div>
+        </div>
+    </>
   )
 }
 
