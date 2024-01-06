@@ -1,0 +1,110 @@
+body {
+  background-color: #303030;
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+  width: 100%; /* Ensures full width */
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Styling for the navbar */
+.navbar {
+  background-color: #4169E1; /* Royal Blue */
+  height: 120px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure it's above other items */
+
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.navbar p {
+  margin: 5px 0;
+  font-style: italic;
+}
+
+/* Styling for the sub-nav */
+.sub-nav {
+  height: 50px;
+  background-color: #303030; /* Dark Grey */
+  text-align: center;
+}
+
+/* Style each badge button */
+.badge {
+  display: inline-block; /* Align badges in a row */
+  padding: 5px 15px; /* Vertical and horizontal padding */
+  margin: 5px; /* Spacing between badges */
+  border-radius: 50px; /* Pill shape */
+  background-color: #6A9AE2; /* Lighter shade of Royal Blue */
+  color: white;
+  border: none; /* Remove default border */
+  cursor: pointer; /* Change mouse icon on hover */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.badge:hover {
+  background-color: #4169E1; /* Darker shade on hover for effect */
+}
+
+/* Update body padding to account for fixed sub-nav as well */
+main {
+  padding-top: 200px; /* Adjust based on the actual height of your navbar and sub-nav */
+}
+
+
+
+.card {
+  /*margin: 10px;*/
+  background-color: #4169E1;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+  color: white;
+  border-radius: 10px;
+  padding: 5px 5px 15px 15px;
+  /*transition: transform 0.3s ease;*/
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #6A9AE2;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+}
+
+.buttonContainer {
+  display: flex;
+  /*grid-template-columns: repeat(3,1fr);*/
+  gap: 10px;
+}
+
+.categoryButton {
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  margin-right: 5px;
+  background-color: #6A9AE2;
+}
+
+.categoryButton:hover {
+  transform: scale(1.10);
+  background-color: #4169E1;
+}
+@media (max-width: 600px) {
+  .cardsContainer {
+    grid-template-columns: 1fr;
+  }
+  .buttonContainer {
+    grid-template-columns: 1fr;
+  }
+}
